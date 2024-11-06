@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overflow-x: hidden;
+}
+.select2-selection {
+    @apply pt-[5px] bg-gray-700 !important;
+}
+.select2-search__field {
+    @apply h-[24px] !important;
+}
+
+.select2 {
+    @apply w-full !important;
+}
