@@ -39,7 +39,16 @@ node {
                     --exclude='storage' \
                     --exclude='.git' \
                     --exclude='.env'
+
+                # Jalankan Docker di server
+                ssh -o StrictHostKeyChecking=no ${PROD_USER}@${PROD_HOST} '
+                cd ${PROD_PATH} &&
+                docker compose down &&
+                docker compose up -d --build
+            '
                 """
+
+                
             }
         }
     }
